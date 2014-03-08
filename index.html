@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <!-- Javascript goes in the document HEAD -->
+    <script type="text/javascript">
+        function altRows(id){
+	        if(document.getElementsByTagName){  
+		
+		        var table = document.getElementById(id);  
+		        var rows = table.getElementsByTagName("tr"); 
+		 
+		        for(var i = 0; i < rows.length; i++){          
+			        if(i % 2 == 0){
+				        rows[i].className = "evenrowcolor";
+			        }else{
+				        rows[i].className = "oddrowcolor";
+			        }      
+		        }
+	        }
+        }
+
+        window.onload = function() {
+            altRows('alternatecolor');
+            altRows('alternatecolor2');
+        };
+    </script>
+
+    <style type="text/css">
+        table.altrowstable {
+	        font-family: verdana,arial,sans-serif;
+	        color:#333333;
+	        border-width: 1px;
+	        border-color: #a9c6c9;
+	        border-collapse: collapse;
+        }
+        table.altrowstable th {
+	        border-width: 1px;
+	        padding: 8px;
+	        border-style: solid;
+	        border-color: #a9c6c9;
+        }
+        table.altrowstable td {
+	        border-width: 1px;
+	        padding: 8px;
+	        border-style: solid;
+	        border-color: #a9c6c9;
+        }
+        .oddrowcolor{
+	        background-color:#d4e3e5;
+        }
+        .evenrowcolor{
+	        background-color:#c3dde0;
+        }
+
+        body {
+            /*text-align: center;*/
+        }
+
+        table {
+            float: left;
+            margin: 10px;
+        }
+
+        section {
+            width: 840px;
+            margin: 0 auto;
+        }
+
+        #main_tables {
+        }
+
+        #legend {
+            clear: both;
+        }
+
+    </style>
+</head>
+    <body>
+        <section id="main_tables">
+            <table class="altrowstable" id="alternatecolor">
+                <caption>Primitive culture</caption>
+                <thead>
+                    <tr><th></th><th>culture</th><th>forts</th><th>farms</th><th>soldier</th></tr>
+                </thead>
+                <tbody>
+                    <tr><th>1/+1/+2</th><td>/16/</td><td>/8/</td><td>3//1</td><td>//</td></tr>
+                    <tr><th>2/+1/+2</th><td>16//4</td><td>8//</td><td>4/3/2</td><td>2//</td></tr>
+                    <tr><th>3/+1/+2</th><td>10//7</td><td>6//</td><td>4/3/3;4</td><td>//1</td></tr>
+                    <tr><th>4/+1/+2</th><td>//</td><td>4//</td><td>5/4/5</td><td>/1/</td></tr>
+                    <tr><th>5/+1/+2</th><td>//</td><td>3//</td><td>6//3</td><td>1//</td></tr>
+                    <tr><th>6/+1/+2</th><td>//</td><td>//</td><td>7//</td><td>//</td></tr>
+                </tbody>
+            </table>
+            <!--  The table code can be found here: http://www.textfixer/tutorials/css-tables.php#css-table03 -->
+
+            <table class="altrowstable" id="alternatecolor2">
+                <caption>Developed culture</caption>
+                <thead>
+                    <tr><th></th><th>culture</th><th>forts</th><th>farms</th><th>soldier</th></tr>
+                </thead>
+                <tbody>
+                    <tr><th>1/+1/+2</th><td>//</td><td>/5/</td><td>//</td><td>//</td></tr>
+                    <tr><th>2/+1/+2</th><td>13//</td><td>/4/</td><td>3//</td><td>2//</td></tr>
+                    <tr><th>3/+1/+2</th><td>//</td><td>4/3/</td><td>3/2/2</td><td>/1/</td></tr>
+                    <tr><th>4/+1/+2</th><td>//</td><td>//</td><td>4/3/</td><td>//</td></tr>
+                    <tr><th>5/+1/+2</th><td>//</td><td>//</td><td>/3/</td><td>//</td></tr>
+                    <tr><th>6/+1/+2</th><td>//</td><td>//</td><td>/4/</td><td>//</td></tr>
+                </tbody>
+            </table>
+        </section>
+        <section>Not everything is filled in, it just takes time...</section>
+        <section id="legend">
+            <h2>How to use. Example:</h2>
+            <em>3rd column is Farms</em> - it means province is building farms.<br/>
+            <em>2nd row is 2/+1/+2</em> - it means province has 2 farms / and have one resource / and have two resources.<br/>
+            <em>In 3rd column and 2nd row we have a cell with 4/3/2</em> - it means 2 farms will build next farm in 4 turns / 2 farms with resource will build next farm in 3 turns / 2 farms with two resources will build next farm in 2 turns.
+        </section>
+        <section>I don't take more advanced forts into consideration</section>
+    </body>
+</html>
