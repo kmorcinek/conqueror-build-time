@@ -92,6 +92,13 @@
             clear: both;
         }
 
+        .upper-caption {
+            height: 45px;
+        }
+
+        .lower-caption {
+            height: 35px;
+        }
     </style>
 </head>
     <body>
@@ -100,7 +107,7 @@
         <section id="main_tables">
             <div>
                 <table class="altrowstable" id="alternatecolor">
-                    <caption>Primitive culture</caption>
+                    <caption class="upper-caption">Primitive culture</caption>
                     <thead>
                         <tr><th></th><th>culture</th><th>forts</th><th>soldier</th></tr>
                     </thead>
@@ -116,23 +123,23 @@
                 <!--  The table code can be found here: http://www.textfixer/tutorials/css-tables.php#css-table03 -->
 
                 <table class="altrowstable" id="alternatecolor2">
-                    <caption>Primitive culture</caption>
+                    <caption class="upper-caption">Primitive culture (the are some anomalies here)</caption>
                     <thead>
-                        <tr><th></th><th>farms</th></tr>
+                        <tr><th>farms/resources</th><th>0</th><th>+1</th><th>+2</th></tr>
                     </thead>
                     <tbody>
-                        <tr><th>1/+1/+2</th><td>3//1</td></tr>
-                        <tr><th>2/+1/+2</th><td>4/3/2</td></tr>
-                        <tr><th>3/+1/+2</th><td>4/3/3;4</td></tr>
-                        <tr><th>4/+1/+2</th><td>5/4/5</td></tr>
-                        <tr><th>5/+1/+2</th><td>6//3</td></tr>
-                        <tr><th>6/+1/+2</th><td>7//</td></tr>
+                        <tr><th>1</th><td>3</td><td></td><td>1</td></tr>
+                        <tr><th>2</th><td>4</td><td>3</td><td>2</td></tr>
+                        <tr><th>3</th><td>4</td><td>3</td><td>3;4</td></tr>
+                        <tr><th>4</th><td>5</td><td>4</td><td>5</td></tr>
+                        <tr><th>5</th><td>6</td><td></td><td>3</td></tr>
+                        <tr><th>6</th><td>7</td><td></td><td></td></tr>
                     </tbody>
                 </table>
             </div>
             <div style="clear:both;">
                 <table class="altrowstable" id="alternatecolor3">
-                    <caption>Developed culture</caption>
+                    <caption class="lower-caption">Developed culture</caption>
                     <thead>
                         <tr><th></th><th>culture</th><th>forts</th><th>soldier</th></tr>
                     </thead>
@@ -146,7 +153,7 @@
                     </tbody>
                 </table>
                 <table class="altrowstable" id="alternatecolor4">
-                    <caption>Developed culture</caption>
+                    <caption class="lower-caption">Developed culture</caption>
                     <thead>
                         <tr><th></th><th>farms</th></tr>
                     </thead>
